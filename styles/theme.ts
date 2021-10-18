@@ -25,6 +25,7 @@ const theme = createTheme({
     fontFamily: "'Rubik', san-serif",
     h1: {
       fontSize: "2rem",
+      fontWeight: "bold",
     },
     h3: {
       fontSize: "0.94rem",
@@ -34,5 +35,6 @@ const theme = createTheme({
     },
   },
 });
+// font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 
 export default theme;
