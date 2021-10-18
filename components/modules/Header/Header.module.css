@@ -1,0 +1,6 @@
+.header {
+  background-image: url("/pattern-bg.png");
+  background-size: cover;
+  min-height: 40vh;
+  padding-top: 31px;
+}
