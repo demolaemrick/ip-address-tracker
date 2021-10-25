@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { Paper, Grid, Typography } from "@mui/material";
-import React from "react";
 
-const Info = ({ data }: any) => {
+import { AppContext } from "../../context";
+
+const Info = () => {
+  const { data } = useContext(AppContext);
+  const dataIsEmpty = Object.keys(data).length === 0;
+
+  if (dataIsEmpty) return <p>Loading...</p>;
   return (
     <Paper
       elevation={4}
