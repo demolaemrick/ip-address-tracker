@@ -1,15 +1,22 @@
+import { useContext, useEffect } from "react";
 import type { NextPage, GetStaticProps } from "next";
 
 import Layout from "../components/ui/Layout";
 import Header from "../components/modules/Header";
 import Info from "../components/modules/Info";
 
+import { AppContext } from "../context";
+
 const Home: NextPage = ({ data }: any) => {
+  const context = useContext(AppContext);
+  useEffect(() => {
+    context.fetchAddress(data);
+  }, []);
   return (
     <Layout>
       <Header />
       <main>
-        <Info data={data} />
+        <Info />
       </main>
     </Layout>
   );
